@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #000000;
+        }
+        #gh{
+            color: #ffffff;
+            font-size: 30px;
+            text-align: center;
+            padding: 20%;
+        }
+    </style>
+</head>
+<body>
+    <div id="gh">
+
+    </div>
+
+    <script>
+        const imprimirvalor = function(valor) {
+            switch(Math.floor(valor)) {
+                case 10 : case 9 : case 8 : 
+                   document.getElementById("gh").innerHTML = ("Voce esta no Quadro de Honra")
+                   console.log("Voce esta no Quadro de Honra")
+                 break
+                case 7 : case 6 : case 5 :
+                    document.getElementById("gh").innerHTML = ("Voce está Aprovado")
+                    console.log("Voce está Aprovado")
+                 break 
+                case 4 : case 3 : case 2 :
+                    document.getElementById("gh").innerHTML = ("Voce está de recuperação")
+                    console.log("Voce está de recuperação")
+                 break        
+                case 1 : case 0 : 
+                    document.getElementById("gh").innerHTML = ("Voce está reprovado")
+                 break 
+                default :
+                    console.log("Nota Invalida") 
+            }
+        }
+
+        imprimirvalor(window.prompt("Digite sua nota"))
+    </script>
+</body>
+</html>

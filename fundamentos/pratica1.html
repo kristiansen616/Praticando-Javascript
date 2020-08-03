@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="Nota">
+
+    </div>
+
+    <script>
+        let ps = window.prompt("Digite seu peso atual")
+        let alt = window.prompt("Digite sua altura")
+        let imc = ps / (alt ** 2)
+
+        if((imc >= 18.5) & (imc < 25)){
+            console.log("Seu imc está bom", imc.toFixed(1))
+        }else{
+            console.log("Seu imc está abaixo do ideal", imc.toFixed(1))
+        }
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="Nota">
+
+    </div>
+
+    <script>
+       let anoatual = window.prompt("Digite o ano Atual :")
+       let anonasc = window.prompt("Digite o ano do seu nascimento :")
+       let idade = anoatual - anonasc
+
+        if(idade >= 18){
+            console.log("Voce está apto a tirar a carteira de motorista, sua idade é", idade, "anos")
+        }else{
+            console.log("Você não está apto a tirar a carteira de motorista, sua idade é", idade , "anos")
+        }
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="Nota">
+
+    </div>
+
+    <script>
+        const val2 = 7
+        const val1 = 5
+        let xes = (val1 + val2) / 2
+
+        if (xes >= 7){
+            console.log("Aprovado", xes)
+        }else if((xes <= 7) & (xes > 6)){
+            console.log("Recuperação", xes)
+        }else{
+            console.log("Reprovado", xes)
+        }
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #pes{
+            color: aqua;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <p id="pes">
+
+    </p>
+
+
+    <script>
+        let nome = window.prompt("Digite Seu nome :")
+        let ps = window.prompt("Digite seu peso :")
+        let alt = window.prompt("Digite sua altura :")
+        let imc = ps / (alt ** 2)
+
+        if(imc < 17){
+            document.getElementById('pes').innerHTML = (`${nome}, Seu peso esta muito abaixo do ideal, seu imc é de ${imc.toFixed(2)}`)
+        }else if((imc >= 17) & (imc < 18.5)) {
+            document.getElementById('pes').innerHTML = (`${nome}, "Seu peso está  abaixo do ideal, seu imc é de", ${imc.toFixed(2)}`)
+        }else if((imc >= 18.5) & (imc < 25)) {
+            document.getElementById('pes').innerHTML = (`${nome}, "Seu peso está ideal, seu imc é", ${imc.toFixed(2)}`)
+        }else if((imc >= 25) & (imc < 30)) {
+            document.getElementById('pes').innerHTML = (`${nome}, "você está com sobrepeso , seu imc é", ${imc.toFixed(2)}`)
+        }else if((imc >= 30) & (imc < 35)) {
+            document.getElementById('pes').innerHTML = (`${nome}, "você esta como obesidade , seu imc é", ${imc.toFixed(2)}`)
+        }else if((imc >= 35) & (imc < 40)) {
+            document.getElementById('pes').innerHTML = (`${nome}, "você esta como obesidade severa, seu imc é", ${imc.toFixed(2)}`)
+        }else if((imc >= 40)) {
+            document.getElementById('pes').innerHTML = (`${nome}, "você esta como obesidade mórbida, seu imc é", ${imc.toFixed(2)}`)
+        }
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #crem{
+            height: 400px;
+            width: 400px;
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 5%;
+            font-size: 30px;
+        }
+        button{
+            margin-left: 220px;
+            font-size: 35px;
+            color: #098030;
+        }
+        .xds{
+            color: #000000;
+        }
+    </style>
+</head>
+<body>
+    <div id="crem">
+
+    </div>
+    <div class="kk">
+
+    </div>
+    
+   <button type="button" onclick="history.go(0)">Atualizar</button>
+    <script>
+      
+    function randn([min = 0,max = 1000]) {
+        const valor = Math.random() * (max - min) + min
+        return Math.floor(valor)
+    }
+
+        const cv = [, 400]
+        document.getElementById('crem').innerHTML = randn((cv))
+          console.log(randn((cv)))
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p id="one">
+        Algo do seu coração 
+    </p>
+        <button type="button" onclick="myFunction()">Mude Aqui</button>
+    
+    <p id="dois">
+        Algo da Sua mente
+    </p>
+        <button type="button" onclick="dois()">Mude Aqui</button>
+    
+    <p id="tres">
+        Algo do Seu corpo
+    </p>
+        <button type="button" onclick="tres()">Mude Aqui</button>
+    
+    
+    <script>
+       function myFunction(){
+            document.getElementById("one").innerHTML = (window.prompt("Digite Algo do seu coração"))
+        }
+        function dois(){
+            document.getElementById("dois").innerHTML = (window.prompt("Digite Algo do sua mente"))
+        }
+        function tres(){
+            document.getElementById("tres").innerHTML = (window.prompt("Digite Algo do seu corpo"))
+        }
+        
+    </script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+         let a = (window.prompt("Digite o ano atual: "))
+        let b = (window.prompt("Digite o ano em que voce nasceu: "))
+
+        let s = a - b 
+
+
+        if(s >= 20){
+            window.alert(`Sua idade é ${s}, Você é maior de idade`)            
+        }else{
+            window.alert(`Sua idade é ${s}, Você é menor de idade`)
+        }
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>O Loco Meu</h1>
+    <h2 id="mind" onclick="myFunction()">Dale time</h2>
+
+    <script>
+        function myFunction(){
+            document.getElementById('mind').innerHTML = "Change my mind"
+        }
+        document.getElementsByTagName('h1')[0].innerHTML = "Change my spirit"
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #crem{
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 5%;
+            font-size: 30px;
+        }
+        button{
+            margin-left: 220px;
+            font-size: 35px;
+            color: #098030;
+            margin-left: 700px;
+        }
+        #vb{
+            color: aqua;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 30px;
+            text-align: center;
+            background-color: #414442;
+        }
+    </style>
+</head>
+<body>
+    <div id="crem">
+        
+      </div>
+
+    <div id="vb">
+
+    </div>
+    <button type="button" onclick="history.go(0)">Atualizar</button>
+
+    
+    <script>
+
+            let g = {}
+            let frutas = []
+            let text = ""
+
+            g.nome = window.prompt("Digite seu nome !")
+            g.idade = window.prompt("Digite Sua Idade !")
+
+            frutas.push("Banana", "Maça", "Manga", "Mamão")
+            for(var i = 0;i < frutas.length;i++) {
+                    text += frutas[i] + "<br>"
+            }
+
+      
+            let r = Math.floor(Math.random()* 500)
+
+             if( g.idade % 2 == 0){
+                document.getElementById('vb').innerHTML = (`${g.idade} sua idade é Numero Par`)
+            }else{
+             document.getElementById('vb').innerHTML = (`${g.idade},sua idade é Numero Impar`)
+           }
+          
+           if(g.idade < 15) {
+                document.getElementById('crem').innerHTML = (`${g.nome}, Você é considerado criança eis aqui sua idade ${g.idade}, seu numero da sorte é ${r},como as seguintes frutas <br> ${text}`)
+           }else if((g.idade >= 15) & (g.idade < 16 )){
+                document.getElementById('crem').innerHTML = (`${g.nome}, Você é considerado Jovem eis aqui sua idade ${g.idade}, seu numero da sorte é ${r},  como as seguintes frutas <br>${text}`)
+           }else if((g.idade >= 16) & (g.idade < 64)){
+                document.getElementById('crem').innerHTML = (`${g.nome}, Você é considerado Adulto eis aqui sua idade ${g.idade}, seu numero da sorte é ${r}, como as seguintes frutas <br>${text}`)
+           }else if(g.idade >= 64){
+                document.getElementById('crem').innerHTML = (`${g.nome}, Você é considerado Idoso eis aqui sua idade ${g.idade}, seu numero da sorte é ${r},  como as seguintes frutas <br>${text}`)
+           }
+
+           
+
+    </script>
+</body>
+</html>
