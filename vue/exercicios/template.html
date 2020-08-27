@@ -7,9 +7,23 @@
     <script src="/js/vue.min.js"></script>
 </head>
 <body class="exercicio">
-    
+    <div id="app"`>
+        
+    </div>
     <script>
-        // ...
+        new Vue ({
+            el: "#app",
+            data: {
+                Titulo: "VueJs",
+                Subtitulo: "Framework Progressivo"
+            },
+            template: `
+                <div>
+                    <h1>{{Titulo}}</h1>
+                    <h3>{{Subtitulo}}</h3>
+                </div>
+            `
+        })
     </script>
 </body>
 </html>
